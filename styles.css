@@ -1,0 +1,554 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+a{
+    text-decoration: none;
+
+}
+ul{
+    list-style: none;
+
+}
+
+img{
+    max-width: 100%;
+}
+nav{
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 120px;
+}
+
+nav ul,.menu{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.btn{
+    background-color: #FA5959;
+    padding: 12px 22px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.open-icon{
+    display: none;
+}
+.icon-close{
+    display: none;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 120px;
+    gap: 35px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.text h1{
+    font-size: 40px;
+    color: rgb(36, 36, 36);
+}
+.text p{
+    font-size: 20px;
+    line-height: 27px;
+    color: gray;
+    max-width: 650px;
+}
+.chrome{
+    background-color: #5267DF;
+    border:none;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+
+}
+
+.firefox{
+    background-color: ghostwhite;
+    border:none;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hero-btn{
+    display: flex;
+    gap: 1rem;
+}
+.illustration-hero{
+    position: relative;
+}
+
+.col{
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    border-radius: 400px 0px 0px 400px;
+    background-color: #5267DF;
+    right: -120px;
+    top: 170px;
+    z-index: -1;
+}
+
+/* features section */
+.feature{
+    padding: 30px 120px;
+}
+
+.feature-tab1, .feature-tab2, .feature-tab3{
+    position: relative;
+}
+
+.col1{
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    border-radius: 0px 400px 400px 0px;
+    background-color: #5267DF;
+    right:210px;
+    top: 100px;
+    z-index: -1;
+}
+.col2{
+    position: absolute;
+    height: 320px;
+    width: 690px;
+    border-radius: 0px 400px 400px 0px;
+    background-color: #5267DF;
+    right:80px;
+    top: 110px;
+    z-index: -1;
+}
+.col3{
+    position: absolute;
+    height: 330px;
+    width: 690px;
+    border-radius: 0px 400px 400px 0px;
+    background-color: #5267DF;
+    right:80px;
+    top: 70px;
+    z-index: -1;
+}
+
+.feature-text{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.feature-text h2{
+    font-size: 40px;
+    color: rgb(36, 36, 36);
+}
+
+.feature-text p{
+    text-align: center;
+    color: gray;
+    max-width: 450px;
+    line-height: 25px;
+}
+
+.feature-links{
+    padding-top: 30px;
+    display:flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+}
+
+.feature-links a{
+    color:black;
+    font-size:18px;
+}
+
+.feature-links a.active:hover{
+    text-decoration: underline;
+    color: #FA5959;
+    cursor: pointer;
+}
+
+.tab1, .tab2, .tab3{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:75px;
+    padding-top: 70px;
+}
+.tab1-text, .tab2-text, .tab3-text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+}
+.tab1-text h2, .tab2-text h2, .tab3-text{
+    font-size:20px;
+    color: rgb(36, 36, 36);
+}
+
+.tab1-text p, .tab2-text p, .tab3-text p{
+    font-size: 1rem;
+    line-height: 25px;
+    color: grey;
+    max-width:380px;
+}
+
+.feature-btn{
+    background-color: #5267DF;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Download */
+.download{
+    padding: 40px 120px;
+}
+.download-text{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 40px;
+}
+.download-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    gap: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    padding: 20px 0;
+}
+
+.download-box button{
+    background-color: #5267DF;
+    padding: 18px 30px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Faqs section */
+.faq-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-text p{
+    max-width: 450px;
+    text-align: center;
+    color: grey;
+    line-height: 20px;
+
+}
+.faqs{
+    padding: 40px 120px;
+}
+
+.faq-box{
+    padding-top: 60px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    border:1px solid black; 
+}
+
+.quest-box{
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    /* gap: 60px; */
+    
+}
+
+.quest p{
+    display: none;
+}
+
+/* update */
+.update{
+    background-color: #5267DF;
+    padding:80px 120px;
+}
+
+.update-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: white;
+}
+.update-text h3{
+    font-size: 30px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.form-box{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 12px;
+    align-items: center;
+}
+
+.form-box form input{
+    padding: 1rem 3rem;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: gray;
+}
+
+
+.form-box button{
+    background-color: #FA5959;
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 500;
+}
+
+footer{
+    background-color: #242A45;
+    display: flex;
+    justify-content: space-between;
+    padding:2rem 120px ;
+    align-items: center;
+}
+
+.ft-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+ footer ul{
+    display: flex;
+    align-items:center;
+    gap: 50px;
+}
+
+footer ul li a{
+    color:white;
+    font-size: 1rem;
+}
+
+.ft-social{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media(max-width:650px) {
+    nav{
+        padding: 25px 35px;
+    }
+    .menu{
+        display: none;
+    }
+
+   .open-icon{
+    display: block;
+   } 
+
+   .hero{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    /* justify-content: center; */
+    padding: 20px 35px;
+   }
+
+   .text h1{
+    text-align: center;
+    font-size: 30px;
+   }
+
+   .text p{
+    font-size: 1rem;
+    text-align: center;
+   }
+
+   .hero-btn{
+    justify-content: center;
+   }
+
+   .chrome, .firefox{
+    padding: 15px 25px;
+    font-size:13px ;
+   }
+
+   .col{
+    height: 170px;
+    width: 300px;
+    border-radius: 400px 0px 0px 400px;
+    right: -33px;
+    top: 60px;
+    z-index: -1;
+}
+
+/* feature-section */
+.feature{
+    padding: 20px 35px;
+}
+
+.feature-text{
+    gap: 15px;
+}
+
+
+.feature-text h2{
+    font-size: 30px;
+}
+
+.tab1-text p{
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.feature-links{
+    gap: 20px;
+    flex-direction: column;
+}
+
+.tab1, .tab2, .tab3{
+    flex-direction: column;
+}
+
+.col1{
+    height: 200px;
+    width: 400px;
+    right:80px;
+    top: 50px;
+}
+
+.col2{
+    height: 220px;
+    right:20px;
+    top: 70px;
+}
+
+.tab1-text, .tab2-text, .tab3-text{
+    gap: 1rem;
+    align-items: center;
+}
+
+.tab1-text{
+    font-size:26px;
+    text-align: center;
+    max-width: 200px;
+}
+
+.tab2-text h2, .tab3-text h2{
+    font-size: 26px;
+}
+.tab1-text p{
+    line-height:22px;
+}
+
+.col3{
+    height: 230px;
+    width: 690px;
+    right:80px;
+    top: 70px;
+}
+
+/* download */
+.download{
+    padding: 20px 35px;
+}
+.download-text h2{
+    font-size: 26px;
+    max-width:200px;
+    text-align: center;
+}
+.download-text p{
+    text-align: center;
+    line-height: 22px;
+}
+.box{
+    display:block;
+}
+
+.download-box{
+    margin-bottom: 40px;
+    gap:25px;
+}
+
+/* update */
+.update{
+    padding: 40px 35px;
+}
+
+.form-box{
+    display: block;
+}
+
+.form-box button{
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* footer */
+footer{
+    display: block;
+    text-align: center;
+    padding: 20px 35px;
+    
+
+}
+
+footer ul, .ft-link{
+    display: block;
+
+}
+
+footer ul li{
+    margin-top:40px ;
+}
+
+.ft-social{
+    margin-top: 40px;
+}
+
+
+}
