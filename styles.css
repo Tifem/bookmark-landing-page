@@ -1,21 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+   font-family: "Rubik", sans-serif;
 }
+
+:root {
+  --color-red: #fa5757ff;
+  --color-blue: #5368dfff;
+  --color-dark: #252b46ff;
+}
+
 a{
     text-decoration: none;
-
 }
+
 ul{
     list-style: none;
-
 }
 
 img{
     max-width: 100%;
 }
+
 nav{
     background-color: #f9f9f9;
     display: flex;
@@ -31,15 +39,17 @@ nav ul,.menu{
 }
 
 .btn{
-    background-color: #FA5959;
+    background-color: var(--color-red);
     padding: 12px 22px;
     color: white;
     border: none;
     border-radius: 5px;
 }
+
 .open-icon{
     display: none;
 }
+
 .icon-close{
     display: none;
 }
@@ -51,23 +61,27 @@ nav ul,.menu{
     padding: 35px 120px;
     gap: 35px;
 }
+
 .text{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
+
 .text h1{
     font-size: 40px;
-    color: rgb(36, 36, 36);
+    color: var(--color-dark);
 }
+
 .text p{
     font-size: 20px;
     line-height: 27px;
     color: gray;
     max-width: 650px;
 }
+
 .chrome{
-    background-color: #5267DF;
+    background-color: var(--color-blue);
     border:none;
     color: white;
     padding: 15px 30px;
@@ -91,6 +105,7 @@ nav ul,.menu{
     display: flex;
     gap: 1rem;
 }
+
 .illustration-hero{
     position: relative;
 }
@@ -100,7 +115,7 @@ nav ul,.menu{
     height: 300px;
     width: 600px;
     border-radius: 400px 0px 0px 400px;
-    background-color: #5267DF;
+    background-color: var(--color-blue);
     right: -120px;
     top: 170px;
     z-index: -1;
@@ -120,7 +135,7 @@ nav ul,.menu{
     height: 300px;
     width: 600px;
     border-radius: 0px 400px 400px 0px;
-    background-color: #5267DF;
+    background-color:var(--color-blue);
     right:210px;
     top: 100px;
     z-index: -1;
@@ -130,7 +145,7 @@ nav ul,.menu{
     height: 320px;
     width: 690px;
     border-radius: 0px 400px 400px 0px;
-    background-color: #5267DF;
+    background-color: var(--color-blue);
     right:80px;
     top: 110px;
     z-index: -1;
@@ -140,7 +155,7 @@ nav ul,.menu{
     height: 330px;
     width: 690px;
     border-radius: 0px 400px 400px 0px;
-    background-color: #5267DF;
+    background-color: var(--color-blue);
     right:80px;
     top: 70px;
     z-index: -1;
@@ -181,7 +196,7 @@ nav ul,.menu{
 
 .feature-links a.active:hover{
     text-decoration: underline;
-    color: #FA5959;
+    color: var(--color-red);
     cursor: pointer;
 }
 
@@ -211,7 +226,7 @@ nav ul,.menu{
 }
 
 .feature-btn{
-    background-color: #5267DF;
+    background-color: var(--color-blue);
     padding: 12px 25px;
     border: none;
     border-radius: 5px;
@@ -248,7 +263,7 @@ nav ul,.menu{
 }
 
 .download-box button{
-    background-color: #5267DF;
+    background-color: var(--color-blue);
     padding: 18px 30px;
     color: white;
     border-radius: 5px;
@@ -256,48 +271,90 @@ nav ul,.menu{
 }
 
 /* Faqs section */
-.faq-text{
+.faqs{
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    padding: 5rem 0;
+}
+.faqs h2{
+    font-weight: 500;
 }
 
-.faq-text p{
+
+.faqs .text{
     max-width: 450px;
     text-align: center;
-    color: grey;
-    line-height: 20px;
-
-}
-.faqs{
-    padding: 40px 120px;
+    padding-top: 18px;
+    line-height: 1.6;
+    color: #979797;
 }
 
 .faq-box{
-    padding-top: 60px;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    border:1px solid black; 
+    max-width: 500px;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #979797;
+    cursor: pointer;
 }
 
-.quest-box{
+.icon-arrow {
+  width: 14px;
+  height: auto;
+}
+
+
+
+.faq-box.active .answer{
+    max-height: 300px;
+}
+
+.question{
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
-    /* gap: 60px; */
-    
+    align-items: center;
 }
 
-.quest p{
-    display: none;
+.question h3{
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.question h3:hover{
+    color: var(--color-red);
+}
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1.2s ease;
+}
+
+.answer p{
+    padding-top: 1rem;
+    line-height: 1.8;
+    font-size: 15px;
+    color: #979797;
+}
+
+.faq-box.active .icon-arrow{
+ content: url("images/icon-arrow-red.svg");
+}
+
+.btn-info{
+    border: none;
+    background-color: var(--color-blue);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 5px;
+    margin-top: 3rem;
+    font-size: 1rem;
 }
 
 /* update */
 .update{
-    background-color: #5267DF;
+    background-color: var(--color-blue);
     padding:80px 120px;
 }
 
@@ -334,7 +391,7 @@ nav ul,.menu{
 
 
 .form-box button{
-    background-color: #FA5959;
+    background-color: var(--color-red);
     border: none;
     color: white;
     padding: 1rem 2rem;
@@ -350,6 +407,7 @@ footer{
     justify-content: space-between;
     padding:2rem 120px ;
     align-items: center;
+    /* flex-direction: column; */
 }
 
 .ft-link{
@@ -532,8 +590,7 @@ footer ul li a{
 footer{
     display: block;
     text-align: center;
-    padding: 20px 35px;
-    
+    padding: 30px 35px;
 
 }
 
@@ -552,3 +609,12 @@ footer ul li{
 
 
 }
+
+
+
+
+
+
+
+
+       
