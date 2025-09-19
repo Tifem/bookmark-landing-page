@@ -164,19 +164,17 @@ nav ul,.menu{
 .feature ul li:hover{
     color: var(--color-red);
 }
-/* underline sits exactly over ul's border-bottom */
 .feature ul li::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px; /* aligns with ul's border */
+  bottom: -2px; 
   width: 0;
   height: 3px;
   background-color: red;
   transition: width 0.3s ease;
 }
 
-/* hover + active states */
 .feature ul li:hover::after,
 .feature ul li.active::after {
   width: 100%;
@@ -190,11 +188,13 @@ nav ul,.menu{
     justify-content: center;
     gap: 100px;
     padding: 4rem 8rem;
+    position: relative;
 }
 
 .feature .content .fbox:not(:first-child){
-display: none;
+    display: none;
 }
+
 .container .content .fbox img{
     max-width: 300px;
     width: 100%;
@@ -224,6 +224,17 @@ display: none;
     border-radius: 5px;
 }
 
+.f{
+    width:700px;
+    height: 352px;
+    background-color: var(--color-blue);
+    position: absolute;
+    left: -115px;
+    top: 150px;
+    z-index: -1;
+    border-radius: 0px 500px 500px 0px;
+
+}
 
 /* Download */
 
@@ -472,8 +483,6 @@ footer ul li a{
 }
 
 /* feature-section */
-
-
 
 
 
