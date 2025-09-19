@@ -123,125 +123,113 @@ nav ul,.menu{
 
 /* features section */
 .feature{
-    padding: 30px 120px;
-}
-
-.feature-tab1, .feature-tab2, .feature-tab3{
-    position: relative;
-}
-
-.col1{
-    position: absolute;
-    height: 300px;
-    width: 600px;
-    border-radius: 0px 400px 400px 0px;
-    background-color:var(--color-blue);
-    right:210px;
-    top: 100px;
-    z-index: -1;
-}
-.col2{
-    position: absolute;
-    height: 320px;
-    width: 690px;
-    border-radius: 0px 400px 400px 0px;
-    background-color: var(--color-blue);
-    right:80px;
-    top: 110px;
-    z-index: -1;
-}
-.col3{
-    position: absolute;
-    height: 330px;
-    width: 690px;
-    border-radius: 0px 400px 400px 0px;
-    background-color: var(--color-blue);
-    right:80px;
-    top: 70px;
-    z-index: -1;
-}
-
-.feature-text{
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    padding: 3rem 0;
+    
 }
 
-.feature-text h2{
-    font-size: 40px;
-    color: rgb(36, 36, 36);
+.feature h2{
+    font-weight: 500;
 }
 
-.feature-text p{
+.feature .aim{
     text-align: center;
-    color: gray;
-    max-width: 450px;
-    line-height: 25px;
+    line-height: 1.6;
+    max-width: 500px;
+    color: var(--color-dark);
+    font-size: 16px;
+    padding-top: 24px;
 }
 
-.feature-links{
-    padding-top: 30px;
-    display:flex;
-    justify-content: center;
-    gap: 40px;
-    align-items: center;
+.feature ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border-bottom: 2px solid gray;
+  padding-top: 3rem;
+  position: relative; /* make it a positioning context */
 }
 
-.feature-links a{
-    color:black;
-    font-size:18px;
+.feature ul li {
+  position: relative;
+  padding-bottom: 1.5rem;
+  cursor: pointer;
+  color:#333;
 }
 
-.feature-links a.active:hover{
-    text-decoration: underline;
+.feature ul li:hover{
     color: var(--color-red);
-    cursor: pointer;
+}
+/* underline sits exactly over ul's border-bottom */
+.feature ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* aligns with ul's border */
+  width: 0;
+  height: 3px;
+  background-color: red;
+  transition: width 0.3s ease;
 }
 
-.tab1, .tab2, .tab3{
+/* hover + active states */
+.feature ul li:hover::after,
+.feature ul li.active::after {
+  width: 100%;
+}
+
+
+
+.feature .content .fbox{
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items:center;
-    gap:75px;
-    padding-top: 70px;
-}
-.tab1-text, .tab2-text, .tab3-text{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: start;
-}
-.tab1-text h2, .tab2-text h2, .tab3-text{
-    font-size:20px;
-    color: rgb(36, 36, 36);
+    gap: 100px;
+    padding: 4rem 8rem;
 }
 
-.tab1-text p, .tab2-text p, .tab3-text p{
-    font-size: 1rem;
-    line-height: 25px;
-    color: grey;
-    max-width:380px;
+.feature .content .fbox:not(:first-child){
+display: none;
+}
+.container .content .fbox img{
+    max-width: 300px;
+    width: 100%;
+    height: 346px;
 }
 
-.feature-btn{
-    background-color: var(--color-blue);
-    padding: 12px 25px;
+.ftext h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.ftext p{
+    color: #979797;
+    line-height: 1.8;
+    max-width: 400px;
+    font-size: 16px;
+    padding-top: 1.5rem;
+}
+
+.ftext .fbtn{
     border: none;
-    border-radius: 5px;
+    margin-top: 1.5rem;
+    background-color: var(--color-blue);
     color: white;
     font-size: 1rem;
+    padding: 16px 30px;
+    border-radius: 5px;
 }
 
+
 /* Download */
+
 .download{
-    padding: 40px 120px;
-}
-.download-text{
     display: flex;
     flex-direction: column;
-    gap:15px;
     justify-content: center;
     align-items: center;
 }
@@ -484,71 +472,10 @@ footer ul li a{
 }
 
 /* feature-section */
-.feature{
-    padding: 20px 35px;
-}
-
-.feature-text{
-    gap: 15px;
-}
 
 
-.feature-text h2{
-    font-size: 30px;
-}
 
-.tab1-text p{
-    font-size: 14px;
-    line-height: 20px;
-    text-align: center;
-}
 
-.feature-links{
-    gap: 20px;
-    flex-direction: column;
-}
-
-.tab1, .tab2, .tab3{
-    flex-direction: column;
-}
-
-.col1{
-    height: 200px;
-    width: 400px;
-    right:80px;
-    top: 50px;
-}
-
-.col2{
-    height: 220px;
-    right:20px;
-    top: 70px;
-}
-
-.tab1-text, .tab2-text, .tab3-text{
-    gap: 1rem;
-    align-items: center;
-}
-
-.tab1-text{
-    font-size:26px;
-    text-align: center;
-    max-width: 200px;
-}
-
-.tab2-text h2, .tab3-text h2{
-    font-size: 26px;
-}
-.tab1-text p{
-    line-height:22px;
-}
-
-.col3{
-    height: 230px;
-    width: 690px;
-    right:80px;
-    top: 70px;
-}
 
 /* download */
 .download{
@@ -616,5 +543,3 @@ footer ul li{
 
 
 
-
-       
